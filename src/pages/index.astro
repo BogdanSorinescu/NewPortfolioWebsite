@@ -21,5 +21,36 @@ import ImageOfMe from "../assets/ImageOfMe.png";
                 alt="Bogdan Sorinescu"
             />
         </div>
+        <div class="InfoCard">
+            <LiquidGlass
+                client:load
+                className="info-glass-card"
+                style={{ position: "fixed", top: "48%", left: "50%" }}
+                padding="42px 56px"
+                cornerRadius={48}
+            >
+                <section class="personal-card">
+                    <h2>About Me</h2>
+
+                    <div class="card-profile">
+                        <div class="avatar">BS</div>
+                        <div>
+                            <h3>Bogdan Sorinescu</h3>
+                            <p>CS Student</p>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <span>Email:</span>
+                        <span>bogdansorinescu@gmail.com</span>
+
+                        <span>Location:</span>
+                        <span>Växjö, Sweden</span>
+
+                        <span>Focus:</span>
+                        <span>Software Developement and Ai Engineering</span>
+                    </div>
+                </section>
+            </LiquidGlass>
+        </div>
     </main>
 </Layout>

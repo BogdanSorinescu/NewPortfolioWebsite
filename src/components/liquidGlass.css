@@ -36,3 +36,68 @@
 .intro-content {
     color: white;
 }
+
+.intro-glass .glass,
+.info-glass-card .glass {
+    box-shadow: none !important;
+}
+
+.info-glass-card {
+    box-sizing: border-box;
+}
+
+.personal-card {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    text-align: left;
+    width: min(620px, calc(86vw - 112px));
+}
+
+.personal-card h2 {
+    margin: 0 0 28px;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 500;
+}
+
+.card-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    margin-bottom: 42px;
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.18);
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.card-profile h3 {
+    margin: 0;
+    font-size: clamp(26px, 3vw, 40px);
+    font-weight: 400;
+}
+
+.card-profile p {
+    margin: 6px 0 0;
+    font-size: clamp(18px, 2vw, 26px);
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 22px 36px;
+    text-align: left;
+    font-size: clamp(16px, 1.5vw, 24px);
+}
+
+.card-info span:nth-child(even) {
+    text-align: right;
+}
