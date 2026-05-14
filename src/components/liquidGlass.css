@@ -7,6 +7,7 @@
 .hero-content {
     display: flex;
     align-items: center;
+    width: fit-content;
 }
 
 .profile-image {
@@ -19,10 +20,17 @@
 }
 
 .intro-glass {
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: fit-content;
+    max-width: none;
+}
+
+.hero-title {
+    white-space: nowrap;
+    font-size: clamp(24px, 3vw, 48px);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
 }
 
 .intro-content {
