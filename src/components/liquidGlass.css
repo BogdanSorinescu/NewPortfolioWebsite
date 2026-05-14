@@ -17,7 +17,6 @@
     width: 650px;
     height: 850px;
     object-fit: cover;
-    
 }
 
 .intro-glass {
@@ -30,7 +29,9 @@
     display: inline-block;
     white-space: nowrap;
     font-size: clamp(24px, 3vw, 48px);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue",
+        Arial, sans-serif;
     font-weight: 400;
     margin: 0;
     text-decoration: none;
@@ -90,7 +91,9 @@
 
 .personal-card {
     color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue",
+        Arial, sans-serif;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
     text-align: left;
     width: min(620px, calc(86vw - 112px));
@@ -142,4 +145,71 @@
 
 .card-info span:nth-child(even) {
     text-align: right;
+}
+
+@media (max-width: 1100px) {
+    .profile-image {
+        width: 460px;
+        height: 620px;
+    }
+
+    .personal-card {
+        width: min(520px, calc(86vw - 112px));
+    }
+}
+
+@media (max-wodth: 850px) {
+    .profile-image {
+        width: 340px;
+        height: 460px;
+        opacity: 0.45;
+    }
+
+    .personal-card {
+        width: min(440px, calc(90vw - 112px));
+    }
+
+    .card-info {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .card-info span:nth-child(even) {
+        text-align: left;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .profile-image {
+        width: 260px;
+        height: 360px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.25;
+    }
+
+    .personal-card {
+        width: min(320px, calc(92vw - 64px));
+    }
+}
+
+@media (max-width: 1400px) {
+    .profile-image {
+        width: 520px;
+        height: 720px;
+    }
+    .personal-card {
+        width: min(560px, calc(86vw - 112px));
+    }
+}
+@media (max-width: 1050px) {
+    .profile-image {
+        width: 380px;
+        height: 560px;
+        opacity: 0.45;
+    }
+    .personal-card {
+        width: min(460px, calc(90vw - 90px));
+    }
 }
