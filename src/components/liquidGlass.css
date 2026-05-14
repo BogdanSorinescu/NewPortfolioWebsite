@@ -14,9 +14,10 @@
     position: fixed;
     bottom: 0px;
     left: 10px;
-    width: 550px;
-    height: 550px;
+    width: 650px;
+    height: 850px;
     object-fit: cover;
+    
 }
 
 .intro-glass {
@@ -25,12 +26,53 @@
 }
 
 .hero-title {
+    position: relative;
+    display: inline-block;
     white-space: nowrap;
     font-size: clamp(24px, 3vw, 48px);
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
     margin: 0;
     text-decoration: none;
+    -webkit-mask-image: linear-gradient(#000 0 0);
+    mask-image: linear-gradient(#000 0 0);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 0% 100%;
+    mask-size: 0% 100%;
+    animation: hero-title-type 1.8s steps(28, end) 0.5s forwards;
+}
+
+.hero-title::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 0.16em;
+    height: 80%;
+    background: currentColor;
+    animation:
+        hero-title-cursor-move 1.8s steps(28, end) 0.5s forwards,
+        hero-title-cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes hero-title-type {
+    to {
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+}
+
+@keyframes hero-title-cursor-move {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes hero-title-cursor-blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .intro-content {
