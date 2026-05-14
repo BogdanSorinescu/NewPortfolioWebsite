@@ -1,0 +1,22 @@
+#testPage {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-image {
+  position: fixed;
+  bottom: -100px;
+  left: 40px;
+  width: 600px;
+}
+
+.intro-glass {
+  position: fixed;
+  top: 40%;
+  left: 30%;
+}
+
+.intro-content {
+  color: white;
+}
