@@ -1,22 +1,30 @@
 #testPage {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
 }
 
 .profile-image {
-  position: fixed;
-  bottom: -100px;
-  left: 40px;
-  width: 600px;
+    position: fixed;
+    bottom: 0px;
+    left: 10px;
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
 }
 
 .intro-glass {
-  position: fixed;
-  top: 40%;
-  left: 30%;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .intro-content {
-  color: white;
+    color: white;
 }
