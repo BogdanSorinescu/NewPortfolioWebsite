@@ -10,13 +10,11 @@
     width: fit-content;
 }
 
-
 .InfoCard {
     transition:
         opacity 0.2s ease,
         visibility 0.2s ease;
 }
-
 
 body.projects-open .InfoCard {
     opacity: 0;
@@ -36,6 +34,19 @@ body.projects-open .InfoCard {
 .intro-glass {
     width: fit-content;
     max-width: none;
+}
+
+.hero-title-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.hero-search-icon {
+    width: clamp(20px, 2.4vw, 36px);
+    height: clamp(20px, 2.4vw, 36px);
+    color: white;
+    flex: 0 0 auto;
 }
 
 .hero-title {
@@ -169,6 +180,35 @@ body.projects-open .InfoCard {
     outline: 2px solid rgba(255, 255, 255, 0.85);
     outline-offset: 6px;
     border-radius: 999px;
+}
+
+.mediaIcons {
+    position: fixed;
+    left: 50%;
+    bottom: clamp(24px, 5vh, 80px);
+    transform: translateX(-50%);
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    z-index: 50%;
+}
+
+.mediaIcons:hover svg {
+    transform: scale(1.08);
+}
+
+.mediaIcons a {
+    color: white;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.mediaIcons svg {
+    width: 42px;
+    height: 42px;
+    color: white;
+    transform: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform-origin: center;
 }
 
 .projects-card {
