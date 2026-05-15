@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LiquidGlassModule from "liquid-glass-react";
 
 import "./liquidGlass.css";
@@ -7,37 +7,47 @@ const LiquidGlass = LiquidGlassModule.default ?? LiquidGlassModule;
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "Personal portfolio built to show my work and background.",
-    github: "https://github.com/your-username/portfolio",
+    title: "Clarus",
+    description: "SVT Featured, AI Swedish Visa migration assistant, powered by a RAG-System.",
+    github: "https://github.com/LNU-AI-Society/Clarus",
   },
   {
-    title: "Project Two",
-    description: "Add a short description of your project here.",
-    github: "https://github.com/your-username/project-two",
+    title: "Self-Service Kiosk",
+    description: "Fully working self service kiosk made in Java, as part of a project course.",
+    github: "https://github.com/BogdanSorinescu/Kiosk-Project",
   },
   {
-    title: "Project Three",
-    description: "Add a short description of your project here.",
-    github: "https://github.com/your-username/project-three",
+    title: "Fitness Tracker",
+    description: "A fitness tracker application, with stregth and diet logging as well as a AI fitness assistant",
+    github: "https://github.com/BogdanSorinescu/FitnessTracker",
   },
 ];
 
 export default function ProjectsGlass() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    document.body.classList.toggle("projects-open", isOpen);
+
+    return () => {
+      document.body.classList.remove("projects-open");
+    };
+  }, [isOpen]);
+
   return (
     <>
-      <LiquidGlass
-        className="projects-glass"
-        style={{ position: "fixed", top: "78%", left: "50%" }}
-        padding="16px 32px"
-        cornerRadius={48}
-        overLight
-        onClick={() => setIsOpen(true)}
-      >
-        <div className="projects-title">My projects</div>
-      </LiquidGlass>
+      {!isOpen && (
+        <LiquidGlass
+          className="projects-glass"
+          style={{ position: "fixed", top: "78%", left: "50%" }}
+          padding="16px 32px"
+          cornerRadius={48}
+          overLight
+          onClick={() => setIsOpen(true)}
+        >
+          <div className="projects-title">My projects</div>
+        </LiquidGlass>
+      )}
 
       {isOpen && (
         <LiquidGlass
