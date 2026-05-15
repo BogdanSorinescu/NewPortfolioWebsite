@@ -95,8 +95,19 @@
 
 .intro-glass .glass,
 .info-glass-card .glass,
-.projects-glass .glass {
+.projects-glass .glass,
+.projects-list-glass .glass {
     box-shadow: none !important;
+}
+
+.projects-glass {
+    width: fit-content;
+    max-width: none;
+    z-index: 4;
+}
+
+.projects-list-glass {
+    z-index: 5;
 }
 
 .info-glass-card {
@@ -127,10 +138,10 @@
     margin-bottom: 42px;
 }
 
-.projects-title h2 {
+.projects-title {
     margin: 0;
-    position: static;
-    display: block;
+    color: white;
+    cursor: pointer;
     white-space: nowrap;
     font-family:
         -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue",
@@ -138,6 +149,85 @@
     font-weight: 400;
     text-decoration: none;
     font-size: clamp(10px, 3vw, 20px);
+}
+
+.projects-title:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 6px;
+    border-radius: 999px;
+}
+
+.projects-card {
+    position: relative;
+}
+
+.projects-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue",
+        Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.75;
+}
+
+.projects-close:hover {
+    opacity: 1;
+}
+
+.projects-document-list {
+    display: grid;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+}
+
+.project-document-item {
+    display: grid;
+    gap: 12px;
+}
+
+.project-document-item:not(:first-child) {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.project-document-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.project-document-header h3 {
+    margin: 0;
+    font-size: clamp(18px, 1.7vw, 26px);
+    font-weight: 400;
+}
+
+.project-document-header a {
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.project-document-header a:hover {
+    border-bottom-color: white;
+}
+
+.project-document-item p {
+    margin: 0;
+    max-width: none;
+    font-size: clamp(14px, 1.1vw, 18px);
+    line-height: 1.45;
 }
 
 .avatar {

@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import LiquidGlass from "../components/liquidGlass.jsx";
+import ProjectsGlass from "../components/ProjectsGlass.jsx";
 import ImageOfMe from "../assets/ImageOfMe.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -52,20 +53,6 @@ import ImageOfMe from "../assets/ImageOfMe.png";
                 </section>
             </LiquidGlass>
         </div>
-        <LiquidGlass 
-        client:load
-        className = "projects-glass"
-        style={{
-            position: "fixed",
-            top: "78%",
-            left:"50%"
-        }}
-        padding= "16px 32px"
-        cornerRadius={48}
-        >
-        <div class="projects-title">
-            <h2>My projects</h2>
-        </div>
-        </LiquidGlass>
+        <ProjectsGlass client:load />
     </main>
 </Layout>
