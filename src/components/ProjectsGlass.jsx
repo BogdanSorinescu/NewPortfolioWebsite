@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import LiquidGlassModule from "liquid-glass-react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./liquidGlass.css";
 
 const LiquidGlass = LiquidGlassModule.default ?? LiquidGlassModule;
@@ -8,17 +9,20 @@ const LiquidGlass = LiquidGlassModule.default ?? LiquidGlassModule;
 const projects = [
   {
     title: "Clarus",
-    description: "SVT Featured, AI Swedish Visa migration assistant, powered by a RAG-System.",
+    description:
+      "SVT Featured, AI Swedish Visa migration assistant, powered by a RAG-System.",
     github: "https://github.com/LNU-AI-Society/Clarus",
   },
   {
     title: "Self-Service Kiosk",
-    description: "Fully working self service kiosk made in Java, as part of a project course.",
+    description:
+      "Fully working self service kiosk made in Java, as part of a project course.",
     github: "https://github.com/BogdanSorinescu/Kiosk-Project",
   },
   {
     title: "Fitness Tracker",
-    description: "A fitness tracker application, with stregth and diet logging as well as a AI fitness assistant",
+    description:
+      "A fitness tracker application, with stregth and diet logging as well as a AI fitness assistant",
     github: "https://github.com/BogdanSorinescu/FitnessTracker",
   },
 ];
@@ -37,16 +41,37 @@ export default function ProjectsGlass() {
   return (
     <>
       {!isOpen && (
-        <LiquidGlass
-          className="projects-glass"
-          style={{ position: "fixed", top: "78%", left: "50%" }}
-          padding="16px 32px"
-          cornerRadius={48}
-          overLight
-          onClick={() => setIsOpen(true)}
-        >
-          <div className="projects-title">My projects</div>
-        </LiquidGlass>
+        <>
+          <LiquidGlass
+            className="projects-glass"
+            style={{ position: "fixed", top: "78%", left: "50%" }}
+            padding="16px 32px"
+            cornerRadius={48}
+            overLight
+            onClick={() => setIsOpen(true)}
+          >
+            <div className="projects-title">My projects</div>
+          </LiquidGlass>
+
+          <LiquidGlass
+            className="resume-glass"
+            style={{ position: "fixed", top: "86%", left: "50%" }}
+            padding="14px 28px"
+            cornerRadius={48}
+            overLight
+          >
+            <a
+              className="resume-button"
+              href="/resume.pdf"
+              download
+              target="_blank"
+              rel="norer"
+            >
+              Resume
+              <FontAwesomeIcon icon={faDownload} classname = "Resume-download-icon"/>
+            </a>
+          </LiquidGlass>
+        </>
       )}
 
       {isOpen && (
