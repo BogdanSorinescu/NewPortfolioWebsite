@@ -25,6 +25,12 @@ const projects = [
       "A fitness tracker application, with stregth and diet logging as well as a AI fitness assistant",
     github: "https://github.com/BogdanSorinescu/FitnessTracker",
   },
+  {
+    title: "Rebootly",
+    description:
+      "A web platform that uses AI to guide mobile device troubleshooting, repair referrals, and sustainable device reuse.",
+    github: "https://github.com/BogdanSorinescu/Rebootly",
+  },
 ];
 
 export default function ProjectsGlass() {
