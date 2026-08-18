@@ -5,6 +5,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./liquidGlass.css";
 
 const LiquidGlass = LiquidGlassModule.default ?? LiquidGlassModule;
+const resumeUrl = `${import.meta.env.BASE_URL}newResume.pdf`;
 
 const projects = [
   {
@@ -68,13 +69,16 @@ export default function ProjectsGlass() {
           >
             <a
               className="resume-button"
-              href="/resume.pdf"
-              download
+              href={resumeUrl}
+              download="BogdanSorinescuCV.pdf"
               target="_blank"
-              rel="norer"
+              rel="noreferrer"
             >
               Resume
-              <FontAwesomeIcon icon={faDownload} classname = "Resume-download-icon"/>
+              <FontAwesomeIcon
+                icon={faDownload}
+                className="Resume-download-icon"
+              />
             </a>
           </LiquidGlass>
         </>

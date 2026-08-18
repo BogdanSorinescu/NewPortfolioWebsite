@@ -1,5 +1,5 @@
 #testPage {
-    min-height: 100vh;
+    min-height: 100svh;
     position: relative;
     overflow: hidden;
 }
@@ -7,7 +7,12 @@
 .hero-content {
     display: flex;
     align-items: center;
-    width: fit-content;
+    width: min(94vw, 1400px);
+       min-height: 100svh;
+       margin-inline: auto;
+       padding: clamp(20px, 4vmin, 64px);
+
+
 }
 
 .InfoCard {
@@ -24,10 +29,12 @@ body.projects-open .InfoCard {
 
 .profile-image {
     position: fixed;
-    bottom: 0px;
-    left: 10px;
-    width: 650px;
-    height: 850px;
+    bottom: -10vh;
+    left:-4vh;
+    
+    width: clamp(480px,50vmin,850px);
+    height: auto;
+    max-height: 110svh;
     object-fit: cover;
 }
 
